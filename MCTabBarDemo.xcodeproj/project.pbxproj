@@ -14,6 +14,9 @@
 		FE77EC9D1FD522BA00FA54EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE77EC9B1FD522BA00FA54EC /* LaunchScreen.storyboard */; };
 		FE77ECA01FD522BA00FA54EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE77EC9F1FD522BA00FA54EC /* main.m */; };
 		FE77ECA91FD52D8200FA54EC /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE77ECA81FD52D8200FA54EC /* MCTabBarController.m */; };
+		FE79E32C1FD54B5400757C25 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79E32B1FD54B5400757C25 /* PushViewController.m */; };
+		FEB7E9DE1FE7916F00388714 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB7E9DD1FE7916F00388714 /* BaseNavigationController.m */; };
+		FEB7E9E11FE794B700388714 /* MCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB7E9E01FE794B700388714 /* MCTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		FE77EC9F1FD522BA00FA54EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE77ECA71FD52D8200FA54EC /* MCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTabBarController.h; sourceTree = "<group>"; };
 		FE77ECA81FD52D8200FA54EC /* MCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
+		FE79E32A1FD54B5400757C25 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		FE79E32B1FD54B5400757C25 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		FEB7E9DC1FE7916F00388714 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		FEB7E9DD1FE7916F00388714 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		FEB7E9DF1FE794B700388714 /* MCTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTabBar.h; sourceTree = "<group>"; };
+		FEB7E9E01FE794B700388714 /* MCTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,8 @@
 				FE77EC911FD522BA00FA54EC /* AppDelegate.m */,
 				FE77EC931FD522BA00FA54EC /* ViewController.h */,
 				FE77EC941FD522BA00FA54EC /* ViewController.m */,
+				FE79E32A1FD54B5400757C25 /* PushViewController.h */,
+				FE79E32B1FD54B5400757C25 /* PushViewController.m */,
 				FE77EC961FD522BA00FA54EC /* Main.storyboard */,
 				FE77EC991FD522BA00FA54EC /* Assets.xcassets */,
 				FE77EC9B1FD522BA00FA54EC /* LaunchScreen.storyboard */,
@@ -78,8 +89,12 @@
 		FE77ECA61FD52D1A00FA54EC /* MCTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				FEB7E9DC1FE7916F00388714 /* BaseNavigationController.h */,
+				FEB7E9DD1FE7916F00388714 /* BaseNavigationController.m */,
 				FE77ECA71FD52D8200FA54EC /* MCTabBarController.h */,
 				FE77ECA81FD52D8200FA54EC /* MCTabBarController.m */,
+				FEB7E9DF1FE794B700388714 /* MCTabBar.h */,
+				FEB7E9E01FE794B700388714 /* MCTabBar.m */,
 			);
 			path = MCTabBar;
 			sourceTree = "<group>";
@@ -156,7 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB7E9E11FE794B700388714 /* MCTabBar.m in Sources */,
 				FE77EC951FD522BA00FA54EC /* ViewController.m in Sources */,
+				FE79E32C1FD54B5400757C25 /* PushViewController.m in Sources */,
+				FEB7E9DE1FE7916F00388714 /* BaseNavigationController.m in Sources */,
 				FE77ECA01FD522BA00FA54EC /* main.m in Sources */,
 				FE77EC921FD522BA00FA54EC /* AppDelegate.m in Sources */,
 				FE77ECA91FD52D8200FA54EC /* MCTabBarController.m in Sources */,

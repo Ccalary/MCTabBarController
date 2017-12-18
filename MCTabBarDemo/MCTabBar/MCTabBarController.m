@@ -8,22 +8,28 @@
 
 #import "MCTabBarController.h"
 #import "ViewController.h"
-
+#import "BaseNavigationController.h"
+#import "MCTabBar.h"
 @interface MCTabBarController ()<UITabBarControllerDelegate>
-@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) MCTabBar *mcTabbar;
 @end
 
 @implementation MCTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITabBar *tabbar = [UITabBar appearance];
-    tabbar.tintColor = [UIColor colorWithRed:27.0/255.0 green:118.0/255.0 blue:208/255.0 alpha:1];//选中时的颜色
-    //设置为NO后则没有透明度添加(tabbar为白色)
-    tabbar.translucent = NO;
+    
+    _mcTabbar = [[MCTabBar alloc] init];
+     [_mcTabbar.centerBtn addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    //选中时的颜色
+    _mcTabbar.tintColor = [UIColor colorWithRed:27.0/255.0 green:118.0/255.0 blue:208/255.0 alpha:1];
+   //透明设置为NO，显示白色，view的高度到tabbar顶部截止，YES的话到底部
+    _mcTabbar.translucent = NO;
+    //利用KVC 将自己的tabbar赋给系统tabBar
+    [self setValue:_mcTabbar forKeyPath:@"tabBar"];
+   
     self.delegate = self;
     [self addChildViewControllers];
-    [self setUpButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,39 +52,24 @@
     childVC.tabBarItem.selectedImage =  [UIImage imageNamed:selectedImage];
     childVC.title = title;
     
-    UINavigationController *baseNav = [[UINavigationController alloc] initWithRootViewController:childVC];
+    BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:childVC];
     
     [self addChildViewController:baseNav];
 }
 
-//中间按钮布局
-- (void)setUpButton{
-    _button = [UIButton buttonWithType:UIButtonTypeCustom];
-    //  设定button大小为适应图片
-    UIImage *normalImage = [UIImage imageNamed:@"tabbar_add"];
-    _button.frame = CGRectMake(0, 0, normalImage.size.width, normalImage.size.height);
-    [_button setImage:normalImage forState:UIControlStateNormal];
-    [_button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    //去除选择时高亮
-    _button.adjustsImageWhenHighlighted = NO;
-    //根据图片调整button的位置
-    CGPoint center = self.tabBar.center;
-    center.y = self.tabBar.frame.origin.y + 5;//中心为tabbar顶部
-    _button.center = center;
-    [self.view addSubview:_button];
-}
 
 - (void)buttonAction:(UIButton *)button{
     self.selectedIndex = 2;//关联中间按钮
     [self rotationAnimation];
 }
 
+
 //tabbar选择时的代理
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     if (tabBarController.selectedIndex == 2){//选中中间的按钮
         [self rotationAnimation];
     }else {
-        [_button.layer removeAllAnimations];
+        [_mcTabbar.centerBtn.layer removeAllAnimations];
     }
 }
 //旋转动画
@@ -87,7 +78,7 @@
     rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI*2.0];
     rotationAnimation.duration = 3.0;
     rotationAnimation.repeatCount = HUGE;
-    [_button.layer addAnimation:rotationAnimation forKey:@"key"];
+    [_mcTabbar.centerBtn.layer addAnimation:rotationAnimation forKey:@"key"];
 }
 
 @end

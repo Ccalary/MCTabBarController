@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "PushViewController.h"
 @interface ViewController ()
 
 @end
@@ -20,10 +20,20 @@
                                                   green:(arc4random()%255)*1.0f/255.0
                                                    blue:(arc4random()%255)*1.0f/255.0 alpha:0.6];
     self.view.backgroundColor = randomColor;
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 80)];
+    btn.center = self.view.center;
+    [btn setTitle:@"按钮" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor orangeColor]];
+    btn.layer.cornerRadius = 4.0;
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)btnAction{
+    
+    [self.navigationController pushViewController:[[PushViewController alloc] init] animated:YES];
+   
 }
 @end
