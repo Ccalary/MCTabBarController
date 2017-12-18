@@ -1,15 +1,15 @@
 # MCTabBarDemo
-##前言
+## 前言
 >最近的项目中有需求在tabbar中间添加凸起按钮，并且点击时按钮要旋转，看了仿斗鱼的凸起，点击后是present出来View，而不是像常规的tabbar上添加一个页面，所以不符合要求，经过一段摸索最后得的一个比较好的效果，下面看效果图
 
 ![效果图.gif](http://upload-images.jianshu.io/upload_images/1828346-c472c423ad7e1e0c.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##需求分析
+## 需求分析
 * tabbar有5个item，每个对应一个页面
 * 中间item为凸起按钮
 * 中间按钮点击后旋转
 
-##效果实现
+## 效果实现
 * 设置5个item
 我们一步步来解决这个问题，首先创建MCTabBarController继承UITabBarController，然后和常规一样创建5个item，中间的按钮不设置图片，代码如下
 ```
@@ -138,4 +138,5 @@ MCTabBar
 
 * 其他
 这里写了BaseNavigationController继承自UINavigationController，处理了push后隐藏底部UITabBar的情况，并解决了iPhonX上push时UITabBar上移的问题。
+
 
