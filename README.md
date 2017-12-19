@@ -42,6 +42,7 @@
 
 * 添加凸起按钮
 我们可以在UITabBar上添加我们的凸起按钮，让他的位置在没有设置的中间按钮偏上，按钮的点击和中间按钮点击绑定，这里直接在MCTabBarController.m中添加会有问题
+
 1、因为凸起按钮的frame超出了UITabBar的frame，这样超出的区域点击按钮会没有响应（图二红框区域），原因和解决办法详情参考我的这篇[iOS UIButton 点击无响应的解决办法](http://www.jianshu.com/p/7a35d6c25bfe)，由于要在UITabBar上添加凸起按钮，并且处理点击无效的问题，所以这里创建了MCTabBar继承UITabBar
 
 ![图二.png](http://upload-images.jianshu.io/upload_images/1828346-79e034d363423727.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
