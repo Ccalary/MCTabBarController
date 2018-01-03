@@ -2,7 +2,7 @@
 可移步简书获得更好的阅读体验[简书](http://www.jianshu.com)
 
 ## 前言
->最近的项目中有需求在tabbar中间添加凸起按钮，并且点击时按钮要旋转，看了仿斗鱼的凸起，点击后是present出来View，而不是像常规的tabbar上添加一个页面，所以不符合要求，经过一段摸索最后得的一个比较好的效果，下面看效果图
+>最近的项目中有需求在tabbar中间添加凸起按钮，并且点击时按钮要旋转，看了仿闲鱼的凸起，点击后是present出来View，而不是像常规的tabbar上添加一个页面(亲测，闲鱼的超出Tabbar部分点击是没有反应的，这是bug啊，下文对这个问题有详解)，所以不符合要求，经过一段摸索最后得的一个比较好的效果，下面看效果图
 
 ![效果图.gif](http://upload-images.jianshu.io/upload_images/1828346-c472c423ad7e1e0c.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -38,6 +38,7 @@
 }
 ```
 这样实现的效果如下图所示
+
 ![图一.png](http://upload-images.jianshu.io/upload_images/1828346-97cf7a08ac80f0dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 添加凸起按钮
@@ -48,7 +49,9 @@
 ![图二.png](http://upload-images.jianshu.io/upload_images/1828346-79e034d363423727.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 2、由于UITabBar是readonly的，所以我们不能直接对他进行赋值，这里利用KVC访问私有变量将MCTabBar赋值给"tabBar"
+
 **具体实现**
+
 MCTabBar
 ```
 #import <UIKit/UIKit.h>
@@ -144,4 +147,5 @@ MCTabBar
 * 其他
 这里写了BaseNavigationController继承自UINavigationController，处理了push后隐藏底部UITabBar的情况，并解决了iPhonX上push时UITabBar上移的问题。
 
+如果对你有所帮助，不要吝啬你的star哦！
 
