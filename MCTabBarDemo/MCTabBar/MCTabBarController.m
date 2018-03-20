@@ -12,6 +12,7 @@
 #import "MCTabBar.h"
 @interface MCTabBarController ()<UITabBarControllerDelegate>
 @property (nonatomic, strong) MCTabBar *mcTabbar;
+@property (nonatomic, assign) NSUInteger selectItem;//选中的item
 @end
 
 @implementation MCTabBarController
@@ -27,7 +28,8 @@
     _mcTabbar.translucent = NO;
     //利用KVC 将自己的tabbar赋给系统tabBar
     [self setValue:_mcTabbar forKeyPath:@"tabBar"];
-   
+    
+    self.selectItem = 0; //默认选中第一个
     self.delegate = self;
     [self addChildViewControllers];
 }
@@ -57,20 +59,24 @@
     [self addChildViewController:baseNav];
 }
 
-
 - (void)buttonAction:(UIButton *)button{
     self.selectedIndex = 2;//关联中间按钮
-    [self rotationAnimation];
+    if (self.selectItem != 2){
+        [self rotationAnimation];
+    }
+    self.selectItem = 2;
 }
-
 
 //tabbar选择时的代理
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     if (tabBarController.selectedIndex == 2){//选中中间的按钮
-        [self rotationAnimation];
+        if (self.selectItem != 2){
+             [self rotationAnimation];
+        }
     }else {
         [_mcTabbar.centerBtn.layer removeAllAnimations];
     }
+    self.selectItem = tabBarController.selectedIndex;
 }
 //旋转动画
 - (void)rotationAnimation{
@@ -80,5 +86,4 @@
     rotationAnimation.repeatCount = HUGE;
     [_mcTabbar.centerBtn.layer addAnimation:rotationAnimation forKey:@"key"];
 }
-
 @end

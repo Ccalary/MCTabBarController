@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"push页面";
     self.view.backgroundColor = [UIColor grayColor];
 }
 
