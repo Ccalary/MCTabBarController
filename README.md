@@ -84,17 +84,19 @@ MCTabBar
 
 //处理超出区域点击无效的问题
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    UIView *view = [super hitTest:point withEvent:event];
-    if (view == nil){
+    if (self.hidden){ //如果tabbar隐藏了，那么直接执行系统方法
+        return [super hitTest:point withEvent:event];
+    }else {
         //转换坐标
         CGPoint tempPoint = [self.centerBtn convertPoint:point fromView:self];
         //判断点击的点是否在按钮区域内
         if (CGRectContainsPoint(self.centerBtn.bounds, tempPoint)){
             //返回按钮
             return _centerBtn;
+        }else {
+            return [super hitTest:point withEvent:event];
         }
     }
-    return view;
 }
 ```
 利用KVC赋值
@@ -111,7 +113,7 @@ MCTabBar
     _mcTabbar.translucent = NO;
     //利用KVC 将自己的tabbar赋给系统tabBar
     [self setValue:_mcTabbar forKeyPath:@"tabBar"];
-   
+    self.selectItem = 0; //默认选中第一个
     self.delegate = self;
     [self addChildViewControllers];
 }
@@ -123,13 +125,18 @@ MCTabBar
 ```
 - (void)buttonAction:(UIButton *)button{
     self.selectedIndex = 2;//关联中间按钮
-    [self rotationAnimation];
+    if (self.selectItem != 2){ //如果是选中的旋转按钮则不再次进行旋转
+        [self rotationAnimation];
+    }
+    self.selectItem = 2;
 }
 
 //tabbar选择时的代理
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     if (tabBarController.selectedIndex == 2){//选中中间的按钮
-        [self rotationAnimation];
+        if (self.selectItem != 2){
+             [self rotationAnimation];
+        }
     }else {
         [_mcTabbar.centerBtn.layer removeAllAnimations];
     }
