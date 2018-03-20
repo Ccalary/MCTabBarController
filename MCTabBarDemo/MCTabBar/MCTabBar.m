@@ -31,16 +31,18 @@
 
 //处理超出区域点击无效的问题
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    UIView *view = [super hitTest:point withEvent:event];
-    if (view == nil){
+    if (self.hidden){
+        return [super hitTest:point withEvent:event];
+    }else {
         //转换坐标
         CGPoint tempPoint = [self.centerBtn convertPoint:point fromView:self];
         //判断点击的点是否在按钮区域内
         if (CGRectContainsPoint(self.centerBtn.bounds, tempPoint)){
             //返回按钮
             return _centerBtn;
+        }else {
+            return [super hitTest:point withEvent:event];
         }
     }
-    return view;
 }
 @end
