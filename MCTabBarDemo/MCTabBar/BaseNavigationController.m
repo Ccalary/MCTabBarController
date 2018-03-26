@@ -44,10 +44,9 @@
     }
     //一定要写在最后，要不然无效
     [super pushViewController:viewController animated:animated];
+    //处理了push后隐藏底部UITabBar的情况，并解决了iPhonX上push时UITabBar上移的问题。
     CGRect rect = self.tabBarController.tabBar.frame;
     rect.origin.y = [UIScreen mainScreen].bounds.size.height - rect.size.height;
     self.tabBarController.tabBar.frame = rect;
 }
-
-
 @end
