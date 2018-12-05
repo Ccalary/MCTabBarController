@@ -20,7 +20,6 @@
     _centerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     //  设定button大小为适应图片
     UIImage *normalImage = [UIImage imageNamed:@"tabbar_add"];
-    _centerBtn.frame = CGRectMake(0, 0, normalImage.size.width, normalImage.size.height);
     [_centerBtn setImage:normalImage forState:UIControlStateNormal];
     //去除选择时高亮
     _centerBtn.adjustsImageWhenHighlighted = NO;

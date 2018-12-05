@@ -41,17 +41,18 @@
 //添加子控制器
 - (void)addChildViewControllers{
     //图片大小建议32*32
-    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"首页" andImageName:@"tab1_n" andSelectImage:@"tab1_p"];
-    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"扩展" andImageName:@"tab2_n" andSelectImage:@"tab2_p"];
+    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"首页" andImageName:@"tab1"];
+    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"扩展" andImageName:@"tab2"];
     //中间这个不设置东西，只占位
-    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"旋转" andImageName:@"" andSelectImage:@""];
-    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"发现" andImageName:@"tab3_n" andSelectImage:@"tab3_p"];
-    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"我" andImageName:@"tab4_n" andSelectImage:@"tab4_p"];
+    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"旋转" andImageName:@""];
+    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"发现" andImageName:@"tab3"];
+    [self addChildrenViewController:[[ViewController alloc] init] andTitle:@"我的" andImageName:@"tab4"];
 }
 
-- (void)addChildrenViewController:(UIViewController *)childVC andTitle:(NSString *)title andImageName:(NSString *)imageName andSelectImage:(NSString *)selectedImage{
+- (void)addChildrenViewController:(UIViewController *)childVC andTitle:(NSString *)title andImageName:(NSString *)imageName{
     childVC.tabBarItem.image = [UIImage imageNamed:imageName];
-    childVC.tabBarItem.selectedImage =  [UIImage imageNamed:selectedImage];
+    // 选中的颜色由tabbar的tintColor决定
+    childVC.tabBarItem.selectedImage =  [UIImage imageNamed:imageName];
     childVC.title = title;
     
     BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:childVC];
@@ -61,10 +62,10 @@
 
 - (void)buttonAction:(UIButton *)button{
     self.selectedIndex = 2;//关联中间按钮
-    if (self.selectItem != 2){
+    if (self.selectItem != self.selectedIndex){
         [self rotationAnimation];
     }
-    self.selectItem = 2;
+    self.selectItem = self.selectedIndex;
 }
 
 //tabbar选择时的代理
