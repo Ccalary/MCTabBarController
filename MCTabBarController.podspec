@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/Ccalary/MCTabBarController", :tag => "#{s.version}" }
-  s.source_files  = "MCTabBarController", "MCTabBarController/**/*.{h,m}"
+  s.source_files  = "MCTabBarController/**/*"
   s.requires_arc = true
 
 end
