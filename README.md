@@ -86,3 +86,6 @@ Create your class inherits from the class MCTabBarController
 
 # License
 This code is distributed under the terms and conditions of the MIT license.
+
+# Contact 
+如果你发现bug，please pull reqeust me，如果你觉得对你有所帮助，请给个star吧🌟。
