@@ -15,7 +15,7 @@ class BaseNavigationController: UINavigationController {
 
         let navBar = UINavigationBar.appearance()
         //设置false之后自动下沉navigationBar 高度
-        self.navigationBar.isTranslucent = true
+        self.navigationBar.isTranslucent = false
         //设置navigationBar的背景色
         navBar.barTintColor = UIColor.white
         //设置左右bar的颜色

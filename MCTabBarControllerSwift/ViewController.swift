@@ -23,11 +23,17 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.orange
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(button)
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 20))
+        label.textColor = UIColor.white
+        label.text = "点击空白区域退出"
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .center
+        self.view.addSubview(label)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @objc func buttonAction(){

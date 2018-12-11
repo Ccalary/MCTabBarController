@@ -20,7 +20,6 @@
 		0DEBF18A21BA6653002138BA /* BulgeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF18921BA6653002138BA /* BulgeTabBarController.m */; };
 		0DEBF18D21BA67DE002138BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF18C21BA67DE002138BA /* ViewController.m */; };
 		0DEBF19021BA6906002138BA /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF18F21BA6906002138BA /* PushViewController.m */; };
-		0DEBF19421BA7166002138BA /* UIView+MCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBF19321BA7166002138BA /* UIView+MCExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +47,6 @@
 		0DEBF18C21BA67DE002138BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0DEBF18E21BA6906002138BA /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		0DEBF18F21BA6906002138BA /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		0DEBF19221BA7166002138BA /* UIView+MCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MCExtension.h"; sourceTree = "<group>"; };
-		0DEBF19321BA7166002138BA /* UIView+MCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MCExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +94,6 @@
 				0DEBF17421BA4D52002138BA /* MCTabBar.m */,
 				0DEBF17921BA4E65002138BA /* MCTabBarController.h */,
 				0DEBF17A21BA4E65002138BA /* MCTabBarController.m */,
-				0DEBF19221BA7166002138BA /* UIView+MCExtension.h */,
-				0DEBF19321BA7166002138BA /* UIView+MCExtension.m */,
 			);
 			path = MCTabBarController;
 			sourceTree = "<group>";
@@ -226,7 +221,6 @@
 				0DEBF16121BA4BAE002138BA /* TableViewController.m in Sources */,
 				0DEBF18A21BA6653002138BA /* BulgeTabBarController.m in Sources */,
 				0DEBF17B21BA4E65002138BA /* MCTabBarController.m in Sources */,
-				0DEBF19421BA7166002138BA /* UIView+MCExtension.m in Sources */,
 				0DEBF17521BA4D52002138BA /* MCTabBar.m in Sources */,
 				0DEBF18621BA6373002138BA /* NormalTabBarController.m in Sources */,
 				0DEBF19021BA6906002138BA /* PushViewController.m in Sources */,

@@ -4,10 +4,9 @@
 //
 //  Created by chh on 2017/12/18.
 //  Copyright © 2017年 Mr.C. All rights reserved.
-//  github:https://github.com/Ccalary/MCTabBarDemo
+//  github:https://github.com/Ccalary/MCTabBarController
 
 #import "MCTabBar.h"
-#import "UIView+MCExtension.h"
 
 #define MCTabBarItemHeight    49.0f
 
@@ -41,8 +40,6 @@
         default:
             break;
     }
-    
-    _centerBtn.originX = ([UIScreen mainScreen].bounds.size.width - _centerBtn.width)/2.0;
 }
 
 - (void)setCenterImage:(UIImage *)centerImage {

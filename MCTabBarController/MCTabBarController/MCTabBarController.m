@@ -4,7 +4,7 @@
 //
 //  Created by caohouhong on 2018/12/7.
 //  Copyright © 2018年 caohouhong. All rights reserved.
-//  github:https://github.com/Ccalary/MCTabBarDemo
+//  github:https://github.com/Ccalary/MCTabBarController
 
 #import "MCTabBarController.h"
 
@@ -39,8 +39,6 @@
 - (void)buttonAction:(UIButton *)button{
     NSInteger count = self.viewControllers.count;
     self.selectedIndex = count/2;//关联中间按钮
-    if (self.delegate){
-        [self.delegate tabBarController:self didSelectViewController:self.viewControllers[self.selectedIndex]];
-    }
+    [self tabBarController:self didSelectViewController:self.viewControllers[self.selectedIndex]];
 }
 @end
