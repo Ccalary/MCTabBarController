@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "MCTabBarController"
   s.version      = "1.0.1"
-  s.summary      = "A useful customized solution about UITabBarController"
+  s.summary      = "A easy way to customize your tabBarController"
   s.homepage     = "https://github.com/Ccalary/MCTabBarController"
   s.license      = "MIT"
   s.author             = { "Ccalary" => "caohouhong@163.com" }
