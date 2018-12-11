@@ -1,11 +1,9 @@
 
 # MCTabBarController
-----------
 * A easy way to customize your tabBarController
 * detail [简书](https://www.jianshu.com/p/5160a1b48679)
 
 # Adding MCTabBarController to your project
------------
 ### CocoaPods 
 [CocoaPods](https://cocoapods.org) is the recommended way to add MCTabBarController to your project.
 1、Add a pod entry for MCTabBarController to your Podfile pod 'MCTabBarController'
@@ -20,17 +18,14 @@ Alternatively you can directly add the folder MCTabBarController files to your p
 3、Include MCTabBarController wherever you need it with #import "MCTabBarController.h".
 
 # Requirements
-----------
 * Xcode 8 or higher
 * iOS 8.0 or higher
 
 # ScreenShot
----------
 ![screenShot](https://github.com/Ccalary/MCTabBarController/blob/master/src/tabbar.gif)
 
 # Usage
----------
-Create 
+Create your class inherits from the class MCTabBarController
 ```
 #import "MCTabBarController.h"
 
@@ -91,5 +86,4 @@ Create
 ```
 
 # License
-----------
 This code is distributed under the terms and conditions of the MIT license.
