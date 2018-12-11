@@ -6,7 +6,8 @@
 # Adding MCTabBarController to your project
 ### CocoaPods 
 [CocoaPods](https://cocoapods.org) is the recommended way to add MCTabBarController to your project.
-* 1、Add a pod entry for MCTabBarController to your Podfile pod 'MCTabBarController'
+* 1、Add a pod entry for MCTabBarController to your Podfile 
+> pod 'MCTabBarController'
 * 2、Install the pod(s) by running pod install.
 * 3、Include MCTabBarController wherever you need it with #import "MCTabBarController.h".
 
