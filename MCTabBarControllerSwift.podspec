@@ -10,5 +10,5 @@ s.ios.deployment_target = "8.0"
 s.source       = { :git => "https://github.com/Ccalary/MCTabBarController.git", :tag => "#{s.version}" }
 s.source_files  = "MCTabBarControllerSwift/MCTabBarSwift/**/*"
 s.requires_arc = true
-s.swift_version = '4.2'
+s.swift_version = '4.1'
 end
