@@ -1,7 +1,7 @@
 
 # MCTabBarController
 * A easy way to customize your tabBarController
-* detail [简书](https://www.jianshu.com/p/5160a1b48679)
+* Detail [简书](https://www.jianshu.com/p/5160a1b48679)
 
 # Adding MCTabBarController to your project
 ### CocoaPods 
