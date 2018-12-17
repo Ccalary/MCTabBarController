@@ -3,6 +3,9 @@
 * 可以快速定制TabBar中间按钮
 * 详细介绍可参考 [简书](https://www.jianshu.com/p/5160a1b48679)
 
+# 效果图
+![效果图](https://github.com/Ccalary/MCTabBarController/blob/master/ScreenShot/tabbar.gif)
+
 # 添加 MCTabBarController 到你的项目
 ### CocoaPods 
 推荐 [CocoaPods](https://cocoapods.org) 
@@ -20,8 +23,6 @@
 * Xcode 8 及以上版本
 * iOS 8.0 及以上版本
 
-# 效果图
-![效果图](https://github.com/Ccalary/MCTabBarController/blob/master/ScreenShot/tabbar.gif)
 
 # 使用简介
 创建你自己的XXTabBarController类继承直 MCTabBarController
