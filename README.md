@@ -1,5 +1,5 @@
 
-# MCTabBarController
+# MCTabBarController [English](https://github.com/Ccalary/MCTabBarController/blob/master/README_EN.md)
 * 可以快速定制TabBar中间按钮
 * 详细介绍可参考 [简书](https://www.jianshu.com/p/5160a1b48679)
 
