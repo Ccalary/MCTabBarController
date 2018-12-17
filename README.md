@@ -1,34 +1,30 @@
 
 # MCTabBarController
-* A easy way to customize your tabBarController
-* Detail [简书](https://www.jianshu.com/p/5160a1b48679)
+* 可以快速定制TabBar中间按钮
+* 详细介绍可参考 [简书](https://www.jianshu.com/p/5160a1b48679)
 
-# Adding MCTabBarController to your project
+# 添加 MCTabBarController 到你的项目
 ### CocoaPods 
-[CocoaPods](https://cocoapods.org) is the recommended way to add MCTabBarController to your project.
-* 1、Add a pod entry for MCTabBarController to your Podfile 
-* 2、Install the pod(s) by running pod install.
-* 3、Include MCTabBarController wherever you need it with #import "MCTabBarController.h".
+推荐 [CocoaPods](https://cocoapods.org) 
+ "MCTabBarController.h".
 * **Object-C** 
 > pod 'MCTabBarController'
 * **Swift** 
 > pod 'MCTabBarControllerSwift'
 
-### Source files
-Alternatively you can directly add the folder MCTabBarController files to your project.
-* 1、Download the latest code version or add the repository as a git submodule to your git-tracked project.
-* 2、Open your project in Xcode, then drag and drop folder MCTabBarController onto your project (use the "Product Navigator view"). Make sure to select Copy items when asked if you extracted the code archive outside of your project.
-* 3、Include MCTabBarController wherever you need it with #import "MCTabBarController.h".
+### 资源文件导入
+* 1、下载最新的项目版本，将文件夹MCTabBarController导入到你的项目中.
+* 2、在需要使用的地方 #import "MCTabBarController.h".
 
-# Requirements
-* Xcode 8 or higher
-* iOS 8.0 or higher
+# 版本要求
+* Xcode 8 及以上版本
+* iOS 8.0 及以上版本
 
-# ScreenShot
-![screenShot](https://github.com/Ccalary/MCTabBarController/blob/master/ScreenShot/tabbar.gif)
+# 效果图
+![效果图](https://github.com/Ccalary/MCTabBarController/blob/master/ScreenShot/tabbar.gif)
 
-# Usage
-Create your class inherits from the class MCTabBarController
+# 使用简介
+创建你自己的XXTabBarController类继承直 MCTabBarController
 ```
 #import "MCTabBarController.h"
 
@@ -88,8 +84,8 @@ Create your class inherits from the class MCTabBarController
 
 ```
 
-# License
+# 开源协议
 This code is distributed under the terms and conditions of the MIT license.
 
-# Contact 
+# 联系我
 如果你发现bug，please pull reqeust me，如果你觉得对你有所帮助，请给个star吧🌟。
