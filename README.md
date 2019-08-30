@@ -54,6 +54,13 @@
 //    self.mcTabbar.centerWidth = 40;
 //    self.mcTabbar.centerHeight = 40;
     [self addChildViewControllers];
+    
+    // 在添加完ChildViewControllers后在设置默认选中才会有效，如果中间定制按钮需要进行选中后的操作，也建议在这里手动处理下，直接进行动画是没有效果的，这里采用了延时执行，无效原因应该是还未构建完成所以动画无效
+ //    self.selectedIndex = 2;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self rotationAnimation];
+//    });
+
 }
 
 - (void)didReceiveMemoryWarning {
