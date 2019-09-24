@@ -28,6 +28,12 @@
     self.mcTabbar.centerImage = [UIImage imageNamed:@"tabbar_add_yellow"];
     self.mcDelegate = self;
     [self addChildViewControllers];
+    
+    // 添加完childVC后再设置选中的index，如果是中间按钮有动画等动作，再延时执行一下即可
+//    self.selectedIndex = 2;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self rotationAnimation];
+//    });
 }
 
 - (void)didReceiveMemoryWarning {

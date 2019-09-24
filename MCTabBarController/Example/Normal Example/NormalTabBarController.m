@@ -29,6 +29,10 @@
 //    self.mcTabbar.centerWidth = 40;
 //    self.mcTabbar.centerHeight = 40;
     [self addChildViewControllers];
+    
+    // 默认选中中间按钮
+    self.selectedIndex = 1;
+    self.mcTabbar.centerBtn.selected = YES;
 }
 
 - (void)didReceiveMemoryWarning {
